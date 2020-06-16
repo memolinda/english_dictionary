@@ -1,6 +1,6 @@
 import json
 
-data = json.load(open("data.json"))
+data = json.load(open("source_file/data.json"))
 
 def dictionary(word):
     if word in data:
