@@ -8,4 +8,5 @@ Termianal userface program written in Python3. When the user pass a word in Engl
       - If the word is not close to any word in the dictionary, it ask to enter a new word.
       
  Program: app1.py
+ 
  Data source for the dictionary: source_file/data.json
