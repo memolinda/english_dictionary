@@ -5,12 +5,11 @@ from difflib import get_close_matches
 data = json.load(open("source_file/data.json"))
 
 def dictionary(word):
-    if word == 'Delhi' or word == 'Paris':
-        return data[word]
-    else:
         word = word.lower()
         if word in data:
             return data[word]
+        elif word.title() in data: #if user entered "texas" this will check for "Texas" as well.
+            return data[word.title()]
         elif len(get_close_matches(word, data.keys()))>0:
             yn = input('Did you mean %s instead? Enter Y if yes, or N if no: ' % get_close_matches(word, data.keys())[0])
             if yn == 'Y' or yn == 'y':
