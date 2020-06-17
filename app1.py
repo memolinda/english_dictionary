@@ -9,9 +9,15 @@ def dictionary(word):
     if word in data:
         return data[word]
     elif len(get_close_matches(word, data.keys()))>0:
-        return 'Did you mean %s instead?' % get_close_matches(word, data.keys())[0]
+        yn = input('Did you mean %s instead? Enter Y if yes, or N if no: ' % get_close_matches(word, data.keys())[0])
+        if yn == 'Y' or yn == 'y':
+            return data[get_close_matches(word, data.keys())[0]]
+        elif yn == 'N' or yn == 'n':
+            return 'The word does not exist! Please check it!'
+        else:
+            return 'I did not understand the entry!'
     else:
-        return 'The word does not exist! Enter a new word!'
+        return 'The word does not exist! Please check it!'
     
 
 word = input('Enter a word: ')
