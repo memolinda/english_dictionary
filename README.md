@@ -1,5 +1,8 @@
 # english_dictionary
 
+Version 1.0:
+Use the data.json file to fetch the data.
+
 Termianal userface program written in Python3. When the user pass a word in English, it return:
  1. It definition if the word is contained in the dictionary
  2. If the word passed from the user is not in the dictionary:
